@@ -5,17 +5,20 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+
+// import { MenubarModule } from "primeng/menubar";
+import { InputTextModule } from "primeng/inputtext";
 import { ButtonModule } from "primeng/button";
-import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    ButtonModule,
-    InputTextModule,
     AppRoutingModule,
+    // MenubarModule,
+    InputTextModule,
+    ButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

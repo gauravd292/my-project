@@ -1,5 +1,8 @@
 import { Component, OnInit } from "@angular/core";
-import { MenuItem } from "primeng/api/menuitem";
+
+// import { MenuItem } from "primeng/api";
+
+import { PrimeNGConfig, MenuItem } from "primeng/api";
 
 @Component({
   selector: "app-frontend",
@@ -9,9 +12,12 @@ import { MenuItem } from "primeng/api/menuitem";
 export class FrontendComponent implements OnInit {
   items: MenuItem[];
 
-  constructor() {}
+  // constructor() {}
+  constructor(private primengConfig: PrimeNGConfig) {}
 
   ngOnInit(): void {
+    this.primengConfig.ripple = true;
+
     this.items = [
       {
         label: "File",
