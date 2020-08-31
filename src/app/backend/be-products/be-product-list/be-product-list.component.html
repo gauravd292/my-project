@@ -1,0 +1,43 @@
+<a [routerLink]="['/admin/products/form']" class="btn btn-success btn-sm"
+  >Create</a
+><br /><br />
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>
+        <a
+          [routerLink]="['/admin/products/form']"
+          class="btn btn-warning btn-xs mr-5"
+          >Update</a
+        >
+        <button class="btn btn-danger btn-xs" (click)="confirm_delete()">
+          Danger
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>
+        <a
+          [routerLink]="['/admin/products/form']"
+          class="btn btn-warning btn-xs"
+          >Update</a
+        >
+        <button class="btn btn-danger btn-xs" (click)="confirm_delete()">
+          Danger
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

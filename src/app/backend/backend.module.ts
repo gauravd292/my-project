@@ -4,10 +4,16 @@ import { CommonModule } from "@angular/common";
 import { BackendRoutingModule } from "./backend-routing.module";
 import { BackendComponent } from "./backend.component";
 
-import { PanelMenuModule } from "primeng/panelmenu";
+import { NgPrimeModule } from "../ngprime/ngprime.module";
+import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [BackendComponent],
-  imports: [CommonModule, BackendRoutingModule, PanelMenuModule],
+  imports: [
+    CommonModule,
+    BackendRoutingModule,
+    NgPrimeModule,
+    ReactiveFormsModule,
+  ],
 })
 export class BackendModule {}

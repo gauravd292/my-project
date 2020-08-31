@@ -6,6 +6,7 @@ import { FrontendComponent } from "./frontend.component";
 const routes: Routes = [
   { path: "", pathMatch: "full", component: FrontendComponent },
   { path: "home", component: FrontendComponent },
+  { path: 'fe-products', loadChildren: () => import('./fe-products/fe-products.module').then(m => m.FeProductsModule) },
 ];
 
 @NgModule({

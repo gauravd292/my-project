@@ -1,0 +1,40 @@
+<a [routerLink]="['/admin/users/create']" class="btn btn-success btn-sm"
+  >Create</a
+><br /><br />
+
+<div *ngIf="userList; then thenBlock; else elseBlock"></div>
+<ng-template #thenBlock>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of userList; let i = index">
+        <th>{{ i + 1 }}</th>
+        <td>{{ row.name }}</td>
+        <td>{{ row.username }}</td>
+        <td>{{ row.email }}</td>
+        <td>{{ row.phone }}</td>
+        <td>
+          <a
+            [routerLink]="['/admin/users/update', row.id]"
+            router
+            class="btn btn-warning btn-xs mr-5"
+            >Update</a
+          >
+          <button class="btn btn-danger btn-xs" (click)="confirm_delete()">
+            Danger
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</ng-template>
+<ng-template #elseBlock>No record found</ng-template>

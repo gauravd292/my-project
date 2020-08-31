@@ -6,9 +6,8 @@ import { AppComponent } from "./app.component";
 
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
-// import { MenubarModule } from "primeng/menubar";
-import { InputTextModule } from "primeng/inputtext";
-import { ButtonModule } from "primeng/button";
+import { HttpClientModule } from "@angular/common/http";
+import { UsersService } from "./_services/users.service";
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,9 +15,7 @@ import { ButtonModule } from "primeng/button";
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    // MenubarModule,
-    InputTextModule,
-    ButtonModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,3 +1,20 @@
-<p>backend works!</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10">
+      <h1>Admin Panel</h1>
+    </div>
+    <div class="col-md-2 text-right">
+      <a [routerLink]="['/home']" class="btn btn-primary">Logout</a>
+    </div>
+  </div>
 
-<p-panelMenu [model]="items" [style]="{ width: '300px' }"></p-panelMenu>
+  <hr />
+  <div class="row">
+    <div class="col-md-3">
+      <p-panelMenu [model]="items" [style]="{ width: '300px' }"></p-panelMenu>
+    </div>
+    <div class="col-md-9">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

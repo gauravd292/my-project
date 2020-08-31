@@ -4,19 +4,10 @@ import { CommonModule } from "@angular/common";
 import { FrontendRoutingModule } from "./frontend-routing.module";
 import { FrontendComponent } from "./frontend.component";
 
-import { MenubarModule } from "primeng/menubar";
-
-import { InputTextModule } from "primeng/inputtext";
-import { ButtonModule } from "primeng/button";
+import { NgPrimeModule } from "./../ngprime/ngprime.module";
 
 @NgModule({
   declarations: [FrontendComponent],
-  imports: [
-    CommonModule,
-    FrontendRoutingModule,
-    MenubarModule,
-    InputTextModule,
-    ButtonModule,
-  ],
+  imports: [CommonModule, FrontendRoutingModule, NgPrimeModule],
 })
 export class FrontendModule {}
